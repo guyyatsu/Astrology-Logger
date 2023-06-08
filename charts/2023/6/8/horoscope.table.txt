@@ -1,0 +1,20 @@
+Sun 17Gem12 - 0:00' (-) [ 3rd house] [-] +0.956 - House cusp 1: 7Pis53
+Moon 12Aqu50 - 5:04' (-) [10th house] [d] +14.57 - House cusp 2: 26Ari44
+Merc 25Tau06 - 2:36' (-) [ 2nd house] [-] +1.456 - House cusp 3: 15Gem35
+Venu 2Leo30 + 2:23' (-) [ 3rd house] [-] +0.928 - House cusp 4: 4Leo27
+Mars 10Leo44 + 1:24' (-) [ 4th house] [f] +0.585 - House cusp 5: 15Leo35
+Jupi 4Tau55 - 1:05' (-) [ 2nd house] [-] +0.207 - House cusp 6: 26Leo44
+Satu 7Pis08 - 1:32' (-) [12th house] [-] +0.015 - House cusp 7: 7Vir53
+Uran 20Tau35 - 0:18' (f) [ 2nd house] [f] +0.053 - House cusp 8: 26Lib44
+Nept 27Pis32 - 1:12' (R) [ 1st house] [-] +0.012 - House cusp 9: 15Sag35
+Plut 0Aqu03 R - 2:35' (X) [ 9th house] [-] -0.015 - House cusp 10: 4Aqu27
+Nort 1Tau49 R + 0:00' (-) [ 2nd house] [-] -0.052 - House cusp 11: 15Aqu35
+Asce 7Pis53 R + 0:00' [ 1st house] -121.4 - House cusp 12: 26Aqu44
+Midh 4Aqu27 + 0:00' [10th house] +351.1
+Car Fix Mut TOT +: 6
+Fir 0 2 0 2 -: 7
+Ear 0 4 0 4 M: 3
+Air 0 3 1 4 N: 8
+Wat 0 0 3 3 A: 9
+TOT 0 9 4 13 D: 2
+< 7
