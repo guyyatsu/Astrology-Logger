@@ -26,7 +26,7 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
     # Flags for the astrolog-cli program; -I -qa is for horoscopes, -qa is for charts.
     astrolog_flags = {
         "interpretation": "-I -qa",
-        "table": "-qa"
+        "table": "-qa",
         "chart": "-Xb -Xo {} -qa",
     }
 
@@ -64,22 +64,42 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
                          stdout=output_file )
 
 
-        ''' Review the results of our command and clean up the file for presentation. '''
-        # Read the contents of the file to a local namespace.
-        with open(target, "r") as lines: horoscope = lines.read()
+            ''' Review the results of our command and clean up the file for presentation. '''
+            # Read the contents of the file to a local namespace.
+            with open(target, "r") as lines: horoscope = lines.read()
 
-        # Slice the file into individual lines, separated by line-breaks.
-        edits = horoscope.split("\n")
-
-        # NOTE: The first two lines of BOTH filetypes are filler/headers; delete them.
-        del edits[0:2]
-
-        # Remove any empty lines within the file.
-        for line in edits:
-            if len(line) == 0:
-                del edits[edits.index(line)]
-
-        with open(file, "w") as horoscope:
-            horoscope.write("\n".join(edits))
-
+            # Slice the file into individual lines, separated by line-breaks.
+            edits = horoscope.split("\n")
+    
+            # NOTE: The first two lines of BOTH filetypes are filler/headers; delete them.
+            del edits[0:2]
+    
+            # Remove any empty lines within the file.
+            for line in edits:
+                if len(line) == 0:
+                    del edits[edits.index(line)]
+    
+            # Execute file-specific formatting.
+            secondary_edits = []
+    
+    
+            # For the `horoscope.table.txt` files;
+            if filetype == "table":
+                for line in edits:
+    
+                    line = line.split()
+                    if line[1] == ":": del line[1]
+                    else: line[0] = line[0].strip(":")
+                    secondary_edits.append(" ".join(line))
+    
+                edits = secondary_edits
+    
+            # For the `horoscope.interpretation.txt` files;
+            if filetype == "interpretation": pass
+    
+    
+            # Re-Write the file with our edits.
+            with open(target, "w") as horoscope:
+                horoscope.write("\n".join(edits))
+    
 HoroscopeDaemon()
