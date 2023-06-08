@@ -13,7 +13,7 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
     prefix = f"{outputBasePath}/{year}/{month}/{day}"
 
     # Filenames for containing results.
-    files = [ "horoscope.interpretation.txt",
+    files = [ "horoscope.txt",
               "horoscope.table.txt",
               "horoscope.chart.bmp"           ]
 
@@ -25,7 +25,7 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
 
     # Flags for the astrolog-cli program; -I -qa is for horoscopes, -qa is for charts.
     astrolog_flags = {
-        "interpretation": "-I -qa",
+        "txt": "-I -qa",
         "table": "-qa",
         "chart": "-Xb -Xo {} -qa",
     }
@@ -95,7 +95,7 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
                 edits = secondary_edits
     
             # For the `horoscope.interpretation.txt` files;
-            if filetype == "interpretation": pass
+            if filetype == "txt": pass
     
     
             # Re-Write the file with our edits.
