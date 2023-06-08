@@ -32,17 +32,19 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
     system(f"mkdir -p {prefix} 2> /dev/null")
 
     for file in files:
-        with open(file, "w") as output_file:
-            
-            execution = f"{astrolog_command} {astrolog_flags[file.split('.')[2]]} {astrolog_arguments}"
-            print(execution)
+
+        target = f"{prefix}/{file}"
+        filetype = file.split(".")[1]
+
+
+        with open(target, "w") as output_file:
+           
+            # Formulate our command; $Binary-File, $$File-DesiredFlags, $DateTime-Location
+            execution = f"{astrolog_command} {astrolog_flags[filetype]} {astrolog_arguments}"
             command( execution.split(),
                      stdout=output_file )
             
 
-    for file in files:
-        with open(file, "r") as lines:
-            horoscope = lines.read()
 
         edits = horoscope.split("\n")
         del edits[0:2]
