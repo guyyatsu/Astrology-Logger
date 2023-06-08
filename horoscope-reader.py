@@ -3,18 +3,18 @@ from os import system
 from datetime import datetime
 
 
-def HoroscopeDaemon(outputBasePath: str="charts"):
+def HoroscopeDaemon(outputBasePath: str="./charts"):
 
     # Datetime objects; for setting the current date down to the minute.
     today = datetime.now(); year = today.year; month = today.month; day = today.day
     hour = today.hour; minute = today.minute; time = f"{hour}:{minute}"
 
     # Target directory for outputting result text.
-    prefix = f"./{outputBasePath}/{year}/{month}/{day}"
+    prefix = f"{outputBasePath}/{year}/{month}/{day}"
 
     # Filenames for containing results.
-    files = [ f"{prefix}/horoscope.interpretation.txt", 
-              f"{prefix}/horoscope.chart.txt"           ]
+    files = [ "horoscope.interpretation.txt", 
+              "horoscope.chart.txt"           ]
 
     # Path to executable binary representing astrolog7.60.
     astrolog_command = f"./astrolog-cli/astrolog.exe"
