@@ -1,0 +1,16 @@
+Astrolog planets and objects:
+Num. Name       Rulers   Detriments Exalt Fall Esoteric Hierarchical Ray
+
+  1 Sun         Leo      Aqu        Ari   Lib  Leo      Leo          2
+  2 Moon        Can      Cap        Tau   Sco  Vir      Aqu          4
+  3 Mercury     Gem Vir  Sag Pis    Vir   Pis  Ari      Sco          4
+  4 Venus       Lib Tau  Ari Sco    Pis   Vir  Gem      Cap          5
+  5 Mars        Ari Sco  Lib Tau    Cap   Can  Sco      Sag          6
+  6 Jupiter     Sag Pis  Gem Vir    Can   Cap  Aqu      Vir          2
+  7 Saturn      Cap Aqu  Can Leo    Lib   Ari  Cap      Lib          3
+  8 Uranus      Aqu      Leo        Sco   Tau  Lib      Ari Leo      7
+  9 Neptune     Pis      Vir        Can   Cap  Can Leo  Can          6
+ 10 Pluto       Sco      Tau        Aqu   Leo  Pis      Pis          1
+ 16 North Node  Aqu      Leo        Gem   Sag                  
+ 22 Ascendant   Ari      Lib        Leo   Aqu  Ari      Ari          1
+ 31 Midheaven   Cap      Can        Tau   Sco  Cap      Cap          7

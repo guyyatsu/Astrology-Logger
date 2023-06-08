@@ -1,0 +1,30 @@
+Astrolog signs and houses:
+Sign        English name     House  Traditional name                   Ruler
+
+Aries       the Ram            1st  House of Personality               Mars
+Taurus      the Bull           2nd  House of Money                     Venus
+Gemini      the Twins          3rd  House of Communication             Mercury
+Cancer      the Crab           4th  House of Home                      Moon
+Leo         the Lion           5th  House of Children                  Sun
+Virgo       the Virgin         6th  House of Servants                  Mercury
+Libra       the Scales         7th  House of Marriage                  Venus
+Scorpio     the Scorpion       8th  House of Death                     Pluto
+Sagittarius the Archer         9th  House of Long Journeys Over Water  Jupiter
+Capricorn   the Sea Goat      10th  House of Career                    Saturn
+Aquarius    the Water Bearer  11th  House of Friends                   Uranus
+Pisces      the Fishes        12th  House of Troubles                  Neptune
+
+No. Sign        Rays  Exoteric   Esoteric   Hierarchical Exalt Detriment  Fall
+
+ 1  Aries         17  Mars       Merc       Uran         Sun   Venu       Satu
+ 2  Taurus         4  Venu       Vulc       Vulc         Moon  Mars Plut  Uran
+ 3  Gemini         2  Merc       Venu       Eart         Nort  Jupi      
+ 4  Cancer        37  Moon       Nept       Nept         Jupi  Satu       Mars
+ 5  Leo           15  Sun        Sun  Nept  Sun  Uran    Asce  Satu Uran  Plut
+ 6  Virgo         26  Merc       Moon Vulc  Jupi         Merc  Jupi Nept  Venu
+ 7  Libra          3  Venu       Uran       Satu         Satu  Mars       Sun 
+ 8  Scorpio        4  Plut Mars  Mars       Merc         Uran  Venu       Moon
+ 9  Sagittarius  456  Jupi       Eart       Mars               Merc       Nort
+10  Capricorn    137  Satu       Satu       Venu         Mars  Moon       Jupi
+11  Aquarius       5  Uran Satu  Jupi       Moon Vulc    Plut  Sun        Asce
+12  Pisces        26  Nept Jupi  Plut       Plut         Venu  Merc       Merc
