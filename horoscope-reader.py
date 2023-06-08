@@ -28,9 +28,19 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
         "chart": "-qa"
     }
 
-
+    # Create the chart directory, if it doesn't exist.
     system(f"mkdir -p {prefix} 2> /dev/null")
 
+
+    """ Here's where everything before all comes together;
+    We have two files, each requiring slightly different alterations of the same command.
+    Depending on which file we're working with, we slot the correct arguments into an f-string
+    by plugging the unique part of the filename into a dictionary keyed for both of the unique
+    filename components.
+    """
+
+    ''' Execute the appropriate command for each type of output file. '''
+    # Open either of the files at our target directory.
     for file in files:
 
         target = f"{prefix}/{file}"
@@ -43,11 +53,19 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
             execution = f"{astrolog_command} {astrolog_flags[filetype]} {astrolog_arguments}"
             command( execution.split(),
                      stdout=output_file )
-            
 
 
+        ''' Review the results of our command and clean up the file for presentation. '''
+        # Read the contents of the file to a local namespace.
+        with open(target, "r") as lines: horoscope = lines.read()
+
+        # Slice the file into individual lines, separated by line-breaks.
         edits = horoscope.split("\n")
+
+        # NOTE: The first two lines of BOTH filetypes are filler/headers; delete them.
         del edits[0:2]
+
+        # Remove any empty lines within the file.
         for line in edits:
             if len(line) == 0:
                 del edits[edits.index(line)]
