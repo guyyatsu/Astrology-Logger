@@ -13,8 +13,9 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
     prefix = f"{outputBasePath}/{year}/{month}/{day}"
 
     # Filenames for containing results.
-    files = [ "horoscope.interpretation.txt", 
-              "horoscope.chart.txt"           ]
+    files = [ "horoscope.interpretation.txt",
+              "horoscope.table.txt",
+              "horoscope.chart.bmp"           ]
 
     # Path to executable binary representing astrolog7.60.
     astrolog_command = f"./astrolog-cli/astrolog.exe"
@@ -25,7 +26,8 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
     # Flags for the astrolog-cli program; -I -qa is for horoscopes, -qa is for charts.
     astrolog_flags = {
         "interpretation": "-I -qa",
-        "chart": "-qa"
+        "table": "-qa"
+        "chart": "-Xb -Xo {} -qa",
     }
 
     # Create the chart directory, if it doesn't exist.
@@ -46,13 +48,20 @@ def HoroscopeDaemon(outputBasePath: str="./charts"):
         target = f"{prefix}/{file}"
         filetype = file.split(".")[1]
 
+        if filetype == "chart":
+            flag = astrolog_flags[filetype].format(target)
+            execution = f"{astrolog_command} {flag} {astrolog_arguments}"
+            command( execution.split() )
 
-        with open(target, "w") as output_file:
-           
-            # Formulate our command; $Binary-File, $$File-DesiredFlags, $DateTime-Location
+        else:
             execution = f"{astrolog_command} {astrolog_flags[filetype]} {astrolog_arguments}"
-            command( execution.split(),
-                     stdout=output_file )
+
+
+            with open(target, "w") as output_file:
+           
+                # Formulate our command; $Binary-File, $$File-DesiredFlags, $DateTime-Location
+                command( execution.split(),
+                         stdout=output_file )
 
 
         ''' Review the results of our command and clean up the file for presentation. '''
